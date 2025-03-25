@@ -9,13 +9,10 @@ export default {
   entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
+    publicPath: './',
     filename: 'bundle.js',
   },
   mode: 'production',
-  devServer: {
-    port: 3000,
-    open: true,
-  },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },
