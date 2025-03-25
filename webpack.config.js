@@ -6,13 +6,13 @@ import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default {
+  mode: 'production',
   entry: './src/index.tsx',
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'build/'),
     publicPath: './',
-    filename: 'bundle.js',
+    filename: '[name]/bundle.js',
   },
-  mode: 'production',
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },
